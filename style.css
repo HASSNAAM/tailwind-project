@@ -1,0 +1,560 @@
+:root {
+  --main-color: #f57c00;
+}
+body {
+  font-family: "Syne", sans-serif;
+}
+.logo {
+  width: 40%;
+}
+.navbar {
+  z-index: 10000;
+}
+.f-icon {
+  z-index: 999;
+}
+.navbar a {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+.navbar
+  a:not(
+    .navbar a:nth-child(2),
+    .navbar a:nth-child(6),
+    .navbar a:nth-child(8),
+    .navbar a:has(i),
+    .navbar a:has(.logo),
+    .navbar a:nth-child(5)
+  ):after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--main-color);
+}
+.navbar a:hover,
+.navbar a:first-child,
+.header small span,
+.header p,
+.header h3:hover,
+.serv span,
+.projects span:hover,
+.help h3 span,
+.expample p span,
+.title h2 span,
+section:nth-of-type(2) .title h2 span,
+.content > div div:has(i) p::first-line,
+.expample span,
+.colo h3 span,
+section:nth-of-type(5) .title h3 span,
+.last .links ul li a:hover,
+section:nth-of-type(5) .title span:hover,
+label:has(span.spicial):hover,
+section:nth-of-type(4) .title span:hover,
+.contact h2 span,
+.contact span:not(.spicial) {
+  color: var(--main-color) !important;
+}
+.header h1 {
+  line-height: 1.5;
+}
+.header h3 {
+  display: inline-block;
+  margin-left: 30px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.header i {
+  cursor: pointer;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 50%;
+  animation: box 1s ease-in-out infinite;
+  transition: background-color 0.3s ease-in-out;
+  animation-play-state: paused;
+}
+.header i:hover {
+  background-color: var(--main-color);
+  animation-play-state: running;
+}
+@keyframes box {
+  5% {
+    box-shadow: 1px 1px 5px 1px #ffffff80, -1px -1px 5px 1px #ffffff80;
+  }
+  25% {
+    box-shadow: 3px 3px 10px 1px #ffffff80, -3px -3px 10px 1px #ffffff80;
+  }
+  50% {
+    box-shadow: 5px 5px 15px 1px #ffffff80, -5px -5px 15px 1px #ffffff80;
+  }
+  65% {
+    box-shadow: 5px 5px 20px 1px #ffffff80, -5px -5px 20px 1px #ffffff80;
+  }
+  75% {
+    box-shadow: 3px 3px 10px 1px #ffffff80, -3px -3px 10px 1px #ffffff80;
+  }
+  100% {
+    box-shadow: 1px 1px 5px 1px #ffffff80, -1px -1px 5px 1px #ffffff80;
+  }
+}
+.header button,
+.down > button {
+  text-transform: capitalize;
+  border-radius: 33px;
+  border-color: var(--main-color);
+  align-self: center;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, border-width 0.3s ease-in-out;
+}
+.header button:hover {
+  background-color: #222;
+}
+.header small {
+  margin: 50px 0;
+  display: block;
+  font-size: 16px;
+}
+.header p {
+  font-family: "Satisfy", "cursive";
+  font-size: 32px;
+}
+.header .p {
+  font-family: "Syne", sans-serif;
+  color: #777;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.fixed .relative {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.fixed .relative:hover i:not(span i) {
+  color: black;
+}
+.fixed span {
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+  font-size: 15px;
+  display: none;
+  line-height: 0.8;
+}
+.icon:hover > span {
+  display: flex;
+}
+.image-container {
+  display: flex;
+}
+.image-item {
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .image-container {
+    flex-wrap: wrap;
+  }
+  .image-item {
+    width: 50%;
+    margin: 10px auto;
+  }
+}
+.image-item img,
+.img img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out, scale 0.3s ease-in-out;
+}
+.image-item:hover img,
+.clients img:hover {
+  filter: grayscale(0%);
+}
+.circle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.image-item:hover .circle {
+  width: 60px;
+  height: 60px;
+}
+.help h3,
+.projects {
+  font-weight: bold;
+  font-size: 38px;
+  border-top: 1px solid #99999953;
+  position: relative;
+  padding-top: 110px;
+  background-image: url(https://itsulu-react.netlify.app/_next/static/media/deco-1.07790e8b.svg);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.help h3::before,
+.help h3::after,
+.serv > div > div::before,
+.projects::before,
+.projects::after,
+section:nth-of-type(4) .title::after,
+section:nth-of-type(4) .title::before,
+.links::before,
+.links::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: var(--main-color);
+  top: -1px;
+}
+.help h3::after,
+.projects::after,
+section:nth-of-type(4) .title::after,
+.links::after {
+  right: 0;
+}
+.serv i {
+  font-size: 45px;
+  position: relative;
+}
+section:nth-of-type(2) h3 > i,
+section:nth-of-type(4) .title {
+  position: relative;
+}
+.serv i::after,
+section:nth-of-type(2) h3 > i::after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: var(--main-color);
+  bottom: -8px;
+  border-radius: 50%;
+  right: -6px;
+  z-index: -1;
+}
+.serv p,
+.expample p:not(p:has(span)),
+section:nth-of-type(2) p,
+section:nth-of-type(3) p,
+.skills span,
+.clients p,
+.lead {
+  color: #999999e8;
+}
+.serv > div > div,
+section:nth-of-type(4) .title,
+.links {
+  border-top: 1px solid #99999953;
+  position: relative;
+}
+.serv > div > div::before {
+  left: 0;
+}
+.projects {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section:nth-of-type(4) .title,
+.links {
+  position: relative;
+}
+.projects span,
+section:nth-of-type(4) span,
+section:nth-of-type(5) span:not(h3 span) {
+  font-size: 15px;
+  color: #99999953;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.projects span:last-child,
+section:nth-of-type(4) span:last-child,
+section:nth-of-type(5) span:last-child {
+  color: black;
+}
+.projects::before {
+  left: 0;
+}
+.expample > div {
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.img {
+  overflow: hidden;
+  border-radius: 10px;
+  height: 300px;
+}
+.img:hover > img {
+  scale: 1.1;
+  filter: grayscale(0%);
+}
+.down {
+  justify-content: space-between;
+  align-items: center;
+}
+.down a,
+.skills a {
+  display: inline-block;
+}
+.down button:hover {
+  outline: 1px solid var(--main-color);
+}
+.down a i,
+.skills a i {
+  border-radius: 50%;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.down a i:hover,
+.skills a i:hover {
+  transform: translateX(10px);
+}
+section:nth-of-type(2),
+section:nth-of-type(5) {
+  background-color: #f2f3f3;
+}
+section:nth-of-type(2) .title {
+  padding-top: 110px;
+  background-image: url(https://itsulu-react.netlify.app/_next/static/media/deco-1.07790e8b.svg);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section:nth-of-type(2) .down,
+section:nth-of-type(4) .title,
+section:nth-of-type(5) .title {
+  background-image: url(https://itsulu-react.netlify.app/_next/static/media/deco-1.07790e8b.svg);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section:nth-of-type(2) h3 > i {
+  font-size: 25px;
+  cursor: pointer;
+}
+section:nth-of-type(2) h3 > i::after {
+  z-index: 1;
+  width: 12px;
+  height: 12px;
+  top: 9px;
+}
+.title small,
+section:nth-of-type(3) .title small {
+  position: relative;
+  font-size: 16px;
+  margin-left: 20px;
+}
+.title small::before,
+.title small::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  bottom: 5px;
+  left: -20px;
+}
+.title h2,
+section:nth-of-type(3) .title h2 {
+  font-size: 35px;
+}
+section:nth-of-type(3) > div > div,
+.skills {
+  justify-content: center;
+  align-items: center;
+}
+.skills {
+  flex-wrap: wrap;
+}
+.skills > div {
+  min-width: 20%;
+  margin-bottom: 20px;
+}
+.skills .prog {
+  justify-content: space-between;
+  align-items: center;
+}
+.skills .prog > div {
+  height: 2px;
+  background-color: rgba(18, 24, 32, 0.2);
+}
+.skills .prog span {
+  display: block;
+}
+.skills .prog > div > div {
+  width: 65%;
+  position: relative;
+  height: 2px;
+  background-color: var(--main-color);
+}
+.skills .prog > div > div::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+  background-color: #f57c00;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  top: -6px;
+}
+section:nth-of-type(4) .title > div,
+section:nth-of-type(5) .title > div {
+  justify-content: space-between;
+  align-items: center;
+}
+section:nth-of-type(4) .title h3,
+section:nth-of-type(5) .title h3 {
+  font-size: 36px;
+}
+.widt {
+  min-width: 50%;
+}
+.clients img {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+.clients i:not(:first-child) {
+  color: var(--main-color);
+}
+.contact {
+  background-color: #171d25;
+  background-image: url(https://itsulu-react.netlify.app/_next/static/media/deco-2.8cba2eb2.svg);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  color: #fff;
+}
+.contact h2 {
+  font-size: 36px;
+}
+label,
+input,
+textarea {
+  display: block;
+  margin: 20px 0;
+  width: 100%;
+}
+input,
+textarea {
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #77777745;
+  transition: all 0.3s ease-in-out;
+}
+input:focus,
+textarea:focus {
+  border-bottom: 1px solid #777777d2;
+}
+.contact .flex:nth-of-type(1) {
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.events {
+  display: flex;
+  gap: 10px;
+}
+.contact .events input {
+  width: 5%;
+  cursor: pointer;
+}
+.contact .events label {
+  width: 95%;
+  cursor: pointer;
+}
+label:has(span.spicial) {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+button[type="submit"] {
+  background-color: var(--main-color);
+  width: 100%;
+  border-radius: 33px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.last {
+  background-color: #121820;
+  background-image: url(images/map.png);
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.last .content {
+  justify-content: center;
+  align-items: center;
+}
+.last .links ul li a {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.last img {
+  width: 30%;
+  flex-shrink: 0;
+}
+.links {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.links ul {
+  flex-wrap: wrap;
+}
+.content > div div:has(i) {
+  background-color: #323232;
+  border-radius: 10px;
+  display: flex;
+  color: #fff;
+  font-weight: bold;
+  width: fit-content;
+  padding: 10px;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.content > div div:has(i) i {
+  font-size: 30px;
+}
+.foot {
+  flex-grow: 1;
+}
+.foot input {
+  background-color: #fff;
+  border-radius: 33px;
+  padding: 20px 50px 20px 10px;
+}
+.foot button {
+  background-color: var(--main-color);
+  padding: 10px 50px;
+  border-radius: 33px;
+}
+footer {
+  background-color: #0e131a;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  align-items: center;
+  color: #77777790;
+}
