@@ -18,7 +18,7 @@
         <!-- Tailwind -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
         <!-- Custome Style -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./styles/style.css">
         <title>ITSULU</title>
     </head>
 
@@ -32,7 +32,7 @@
                 </div>
 
                 <!-- Buy Now Button -->
-                <button class="bg-green-500 text-white px-4 py-2 rounded">Buy Now</button>
+                <button class="bg-green-500 text-white px-4 py-2 rounded button">Buy Now</button>
             </div>
             <!-- Navbar -->
             <nav class="bg-gray-700 p-4">
@@ -54,7 +54,7 @@
                     <a href="#" class="text-white mb-2 hover:text-orange-950 md:hidden"><i
                             class="fab fa-sistrix fa-lg"></i></a>
                     <!-- Mobile Menu Button (Hidden on larger screens) -->
-                    <button id="mobile-menu-button" class="md:hidden text-white">
+                    <button id="mobile-menu-button" class="md:hidden text-white ml-4 mb-2">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -65,7 +65,7 @@
             </nav>
 
             <!-- Mobile Menu (Hidden on larger screens) -->
-            <div id="mobile-menu" class="md:hidden bg-gray-700 p-4 text-right">
+            <div id="mobile-menu" class="md:hidden bg-gray-700 p-4">
                 <a href="#" class="block text-white mb-2">Enterprise</a>
                 <a href="#" class="block text-white mb-2">Case Studies</a>
                 <a href="#" class="block text-white mb-2">Services</a>
@@ -111,32 +111,32 @@
 
         <!-- Fixed Icon -->
         <div class="f-icon fixed bg-gray-500 right-0 top-1/2 transform -translate-y-1/2 flex flex-col items-center">
-            <div class="p-4 bg-gray-500 hover:bg-white relative icon">
+            <div class="p-2 bg-gray-500 hover:bg-white relative icon">
                 <i class="fas fa-eye text-white fa-lg"></i>
                 <span class="absolute top-2 right-full p-2 bg-black text-white rounded-full text-center">remove panel
                     <i class="fas fa-arrow-right"></i>
                 </span>
             </div>
 
-            <div class="p-4 bg-gray-500 hover:bg-white relative icon">
+            <div class="p-2 bg-gray-500 hover:bg-white relative icon">
                 <i class="fas fa-futbol text-white fa-lg"></i>
                 <span class="absolute top-2 right-full p-2 bg-black text-white rounded-full text-center">Help
                     <i class="fas fa-arrow-right"></i></span>
             </div>
 
-            <div class="p-4 bg-gray-500 hover:bg-white relative icon">
+            <div class="p-2 bg-gray-500 hover:bg-white relative icon">
                 <i class="fas fa-shopping-cart text-white fa-lg"></i>
                 <span class="absolute top-2 right-full p-2 bg-black text-white rounded-full text-center">buy theme
                     <i class="fas fa-arrow-right"></i></span>
             </div>
 
-            <div class="p-4 bg-gray-500 hover:bg-white relative icon">
+            <div class="p-2 bg-gray-500 hover:bg-white relative icon">
                 <i class="fas fa-braille text-white fa-lg"></i>
                 <span class="absolute top-2 right-full p-2 bg-black text-white rounded-full text-center">demo/ related
                     <i class="fas fa-arrow-right"></i></span>
             </div>
 
-            <div class="p-4 bg-gray-500 hover:bg-white relative icon">
+            <div class="p-2 bg-gray-500 hover:bg-white relative icon">
                 <i class="fab fa-wordpress text-white fa-lg"></i>
                 <span class="absolute top-2 right-full p-2 bg-black text-white rounded-full text-center">wp theme
                     <i class="fas fa-arrow-right"></i></span>
@@ -354,7 +354,7 @@
                 <button class="font-bold border py-2 lg:py-4 px-12">how we work</button>
             </div>
         </section>
-        <section class="p-12 pt-44">
+        <section class="p-12 pt-44 responsive">
             <div class="title font-bold">
                 <small>Our Skill</small>
                 <div class="lg:flex mb-28 mt-10">
@@ -436,7 +436,7 @@
                 </div>
             </div>
         </section>
-        <section class="p-8">
+        <section class="p-8 news">
             <div class="title pt-36 mx-12 mb-8 font-bold">
                 <small>Our Latest News</small>
                 <div class="lg:flex my-10">
@@ -495,7 +495,7 @@
                 <a href="#">View More Insights <i class="fas fa-arrow-right ml-4"></i></a>
             </div>
         </section>
-        <section class="px-8">
+        <section class="px-8 client">
             <div class="title pt-36 mx-12 mb-8 font-bold">
                 <small>Testimonial</small>
                 <div class="lg:flex my-10">
@@ -598,7 +598,7 @@
             <div class="content lg:flex">
                 <div class="lg:w-2/3">
                     <h2 class="mb-10"><img src="images/logo-light.png" alt="logo"></h2>
-                    <p class="lead mb-10 w-2/3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                    <p class="lead mb-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                         nonummy nibh euismod tincidunt
                         ut laoreet
                         dolore
@@ -614,6 +614,7 @@
                             App Store</p>
                     </div>
                 </div>
+              <div>
                 <div class="colo text-white">
                     <h3 class="mb-10">Join The <span>ITSulu</span> <br>
                         Experience</h3>
@@ -624,6 +625,7 @@
                     <input type="email" placeholder="Your email address">
                     <button class="w-full">Subscribe Now</button>
                 </div>
+              </div>
             </div>
             <div class="links flex pt-8">
                 <ul class="flex gap-4">

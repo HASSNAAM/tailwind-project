@@ -1,6 +1,10 @@
 :root {
   --main-color: #f57c00;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 body {
   font-family: "Syne", sans-serif;
 }
@@ -55,6 +59,9 @@ section:nth-of-type(4) .title span:hover,
 .contact h2 span,
 .contact span:not(.spicial) {
   color: var(--main-color) !important;
+}
+.header {
+  min-height: 100vh;
 }
 .header h1 {
   line-height: 1.5;
@@ -164,7 +171,7 @@ section:nth-of-type(4) .title span:hover,
 .image-item img,
 .img img {
   width: 100%;
-  height: auto;
+  height: 100%;
   filter: grayscale(100%);
   transition: filter 0.3s ease-in-out, scale 0.3s ease-in-out;
 }
@@ -448,11 +455,14 @@ section:nth-of-type(5) .title h3 {
 .contact h2 {
   font-size: 36px;
 }
+textarea {
+  resize: none;
+}
 label,
 input,
 textarea {
   display: block;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
   width: 100%;
 }
 input,
@@ -504,7 +514,6 @@ button[type="submit"] {
 }
 .last .content {
   justify-content: center;
-  align-items: center;
 }
 .last .links ul li a {
   color: #fff;
@@ -557,4 +566,123 @@ footer {
   padding: 25px;
   align-items: center;
   color: #77777790;
+}
+@media screen and (max-width: 767px) {
+  .button {
+    width: -webkit-fill-available;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 10px;
+  }
+  .header {
+    padding-top: 220px;
+  }
+  .header h1 {
+    font-size: 30px;
+  }
+  .header p {
+    margin-bottom: 0;
+  }
+  .header small {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .help h3 {
+    padding-top: 30px;
+  }
+  .serv h2 {
+    margin: 0;
+  }
+  .serv > div > div {
+    gap: 20px;
+  }
+  .serv > div > div p {
+    width: 100%;
+  }
+  .projects {
+    padding-top: 0;
+    gap: 20px;
+    margin: 35px;
+    margin-top: 0;
+  }
+  .projects > div {
+    margin-right: 0;
+  }
+  .expample {
+    padding: 35px;
+  }
+  .down {
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .expample > div {
+    margin-bottom: 35px;
+  }
+  .servises {
+    padding-bottom: 0;
+  }
+  section:nth-of-type(2),
+  section:nth-of-type(5) {
+    padding: 35px;
+  }
+  section:nth-of-type(2) .title {
+    padding-top: 0;
+  }
+  section:nth-of-type(2) .title h2 {
+    margin-bottom: 30px;
+  }
+  section:nth-of-type(2) .down {
+    margin-top: 30px;
+  }
+  .responsive {
+    padding: 35px;
+  }
+  .responsive > div > div {
+    margin-bottom: 30px;
+  }
+  .news {
+    padding: 0;
+  }
+  .news .title {
+    padding-top: 30px;
+    margin: 35px;
+  }
+  .client .title {
+    padding-top: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .clients {
+    padding: 0;
+  }
+  .clients > div {
+    margin-bottom: 30px;
+  }
+  .contact {
+    padding: 35px;
+  }
+  textarea {
+    max-width: 100%;
+  }
+  .last {
+    padding: 35px;
+  }
+  .last .content p {
+    width: 100%;
+  }
+  .content > div div:has(i) {
+    margin-bottom: 30px;
+  }
+  .foot {
+    margin-top: 20px;
+    padding: 0;
+  }
+}
+textarea {
+  max-height: 150px;
+}
+.foot input {
+  padding: 11px 50px 11px 22px;
+  margin-top: 30px;
 }
